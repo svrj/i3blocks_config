@@ -137,8 +137,7 @@ min_width=CPU: 100.00%
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
-command=/home/jeremy/bin/temperature
+[cpu_temperature]
 label=TEMP
 interval=10
 
@@ -168,7 +167,7 @@ interval=30
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
-[openvpn]
+[check_openvpn]
 label=OpenVPN
 command=/home/jeremy/bin/check_openvpn
 interval=20
