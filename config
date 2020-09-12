@@ -76,7 +76,12 @@ interval=30
 
 [iface]
 instance=wlp2s0
-label=wifi
+# label=wifi
+color=#00FF00
+interval=10
+separator=false
+
+[wifi_ssid]
 color=#00FF00
 interval=10
 separator=false

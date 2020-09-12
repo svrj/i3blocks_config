@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ESSID=$(iwconfig wlp2s0 | grep ESSID | sed -e "s/.*ESSID://g"| sed -e "s/\"//g")
+
+echo $ESSID
+echo $ESSID
+
