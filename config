@@ -29,8 +29,7 @@ separator_block_width=15
 markup=none
 
 #guess the weather hourly
-[weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+[check_weather]
 interval=14400
 #color=#A4C2F4 Volume indicator
 
