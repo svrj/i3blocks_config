@@ -28,6 +28,22 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#
+[keyindicator]
+instance=CAPS
+interval=once
+signal=11
+
+#[keyindicator]
+#instance=NUM
+#interval=once
+#signal=11
+
 #guess the weather hourly
 [check_weather]
 interval=14400
@@ -74,38 +90,47 @@ interval=30
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 
 [iface]
-instance=wlp2s0
-# label=wifi
+# instance=enp1s0
+instance=enp0s31f6
+label=eth
 color=#00FF00
 interval=10
 separator=false
-
-[wifi_ssid]
-color=#00FF00
-interval=10
-separator=false
-
-[wifi]
-instance=wlp2s0
-label=strength
-interval=10
-separator=false
-
-[bandwidth]
-instance=wlp2s0
-label=bandwidth
-interval=5
 
 [iface]
-instance=wlx74da388f56cb
+instance=enx0050b6be9c71
+label=usb-eth
+color=#00FF00
+interval=10
+separator=false
+
+[iface]
+# instance=wlx60634c31b24d
+instance=wlx00e04c3d59c8
+color=#00FF00
 label=usb-wifi
 interval=10
 separator=false
 
+[wifi_ssid]
+# instance=wlx60634c31b24d
+instance=wlx00e04c3d59c8
+color=#00FF00
+interval=10
+separator=false
+
 [wifi]
-instance=wlx74da388f56cb
+# instance=wlx60634c31b24d
+instance=wlx00e04c3d59c8
 label=strength
 interval=10
+
+# [bandwidth]
+# instance=wlp2s0
+# label=bandwidth
+# interval=5
+
+
 
 # CPU usage
 #
@@ -140,22 +165,6 @@ min_width=CPU: 100.00%
 label=TEMP
 interval=10
 
-# Key indicators
-#
-# Add the following bindings to i3 config file:
-#
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#instance=CAPS
-#interval=once
-#signal=11
-
-#[keyindicator]
-#instance=NUM
-#interval=once
-#signal=11
-
 # The battery instance defaults to 0.
 [battery]
 #label=BAT
@@ -168,7 +177,7 @@ interval=30
 # Support multiple VPN, with colors.
 [check_openvpn]
 label=OpenVPN
-command=/home/jeremy/bin/check_openvpn
+# command=/home/jeremy/bin/check_openvpn
 interval=20
 
 
