@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-weather=$(curl -Ss "https://wttr.in?format=3&nonce=$RANDOM")
+url="https://wttr.in?format=3&nonce=$RANDOM"
+weather=$(curl -Ss $url)
 
 echo $weather
 echo $weather
