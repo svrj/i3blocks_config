@@ -1,5 +1,5 @@
 #!/bin/bash
-result=$(nmcli -t -f type,state,connection d | egrep "^(tun|tap):connected" | awk -F':' '{ print $3 }')
+result=$(nmcli -t -f type,state,connection d | egrep -v tailscale | egrep "^(tun|tap):connected" | awk -F':' '{ print $3 }')
 device=$(nmcli d show $result | grep IP4.ADDRESS | awk '{print $2}')
 [[ -z $result ]] && echo 'N/A' || echo "$result $device"
 [[ -z $result ]] && echo 'N/A' || echo "$result $device"
