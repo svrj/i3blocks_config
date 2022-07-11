@@ -98,8 +98,8 @@ interval=10
 separator=false
 
 [iface]
-instance=enx0050b6be9c71
-label=usb-eth
+instance=enx34298f73982e
+label=dock-eth
 color=#00FF00
 interval=10
 separator=false
@@ -114,14 +114,16 @@ separator=false
 
 [wifi_ssid]
 # instance=wlx60634c31b24d
-instance=wlx00e04c3d59c8
+# instance=wlx00e04c3d59c8
+instance=wlp0s20f3
 color=#00FF00
 interval=10
 separator=false
 
 [wifi]
 # instance=wlx60634c31b24d
-instance=wlx00e04c3d59c8
+# instance=wlx00e04c3d59c8
+instance=wlp0s20f3
 label=strength
 interval=10
 
@@ -129,8 +131,6 @@ interval=10
 # instance=wlp2s0
 # label=bandwidth
 # interval=5
-
-
 
 # CPU usage
 #
@@ -175,11 +175,10 @@ interval=30
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
-[check_openvpn]
-label=OpenVPN
-# command=/home/jeremy/bin/check_openvpn
+[check_tailscale]
+label=VPN
+# command=/home/jeremy/bin/check_tailscale
 interval=20
-
 
 # Date Time
 #
