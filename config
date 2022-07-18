@@ -63,14 +63,15 @@ interval=once
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
-[memory]
-label=MEM
-separator=false
-interval=30
+# [memory]
+# label=MEM
+# separator=false
+# interval=30
 
 [memory]
 label=SWAP
-instance=swap
+#instance=swap
+instance=/dev/mapper/ubuntu--vg-swap_1
 separator=false
 interval=30
 
