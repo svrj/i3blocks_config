@@ -133,6 +133,10 @@ interval=10
 # label=bandwidth
 # interval=5
 
+[bluetooth]
+label=ᛒ
+interval=10
+
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+show_paired() {
+    bluetoothctl paired-devices | cut -d ' ' -f1,2 --complement
+}
+
+show_paired
+show_paired
+
